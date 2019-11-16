@@ -1,7 +1,7 @@
 .body
   .header
     =@monster
-    が現れた！！
+    が現れた
   .main
     .left-bar
       .player-zone
@@ -10,9 +10,13 @@
         .player-zone__hp
         HP 100/100
         .player-zone__battle-select
-          %input.attack{type:"submit", value:"戦う"}
-          %input.supercial{type:"submit", value:"必殺技"}
-          %input.defence{type:"submit", value:"防御"}
+          .form
+            %form{action:"#",id:"new_message", method:"post",class:"plaing-form"}
+            %input.plaing-message{type:"text", name:"message[content]"}
+          .submit
+            %input.attack{type:"submit", value:"攻撃"}
+            %input.supercial{type:"submit", value:"必殺技"}
+            %input.defence{type:"submit", value:"防御"}
     .right-bar
       .monster-zone
         .player-zone__name
@@ -20,7 +24,7 @@
         .__hp
         HP 100/100
         .__monster-image
-          %img src = '#'
+          = image_tag 'pipo-boss001.png', width:'300', height:'180'
     .battles
       .battle-field
         .messages

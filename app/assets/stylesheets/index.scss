@@ -13,7 +13,8 @@
     background-repeat:  no-repeat;
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    text-shadow:-1px -1px #555;
   }
 
   .left-bar{
@@ -32,15 +33,43 @@
       height: 100%;
       //display: flex;
       align-items: center;
-      padding: 110px 10px;
+      padding: 120px 10px;
       font-size: 30px;
+      text-shadow:-1px -1px #555;
       &__name{
       }
       &__hp{
       }
       &__battle-select{
-        .attack{
-        
+        .form{
+          input.plaing-message{
+          width:270px;
+          text-align: center;
+          font-size: 20px;
+          background-image: url("message_back.png");
+          background-size: cover;
+          background-position:center; 
+          background-repeat:  no-repeat; 
+          font-family:"HanziPen SC";
+          }
+        }
+        .submit{
+          input{
+          border-radius:10px;
+          background-image: url("submit.png");
+          background-position:center; 
+          background-repeat:  no-repeat; 
+          display: flex;
+          flex-direction: column;
+          margin:10px 10px;
+          height:45px;
+          width: 95px;
+          background-color:#aa0000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-shadow:1px 1px 5px #fff,5px 5px 10px #888;
+          }
         }
       }
        
@@ -57,13 +86,16 @@
     background-size: cover;
     z-index: 1;
     .monster-zone{
-      
+      text-shadow:-1px -1px #555;
       height: 100%;
       //display: flex;
       align-items: center;
-      padding: 110px 10px;
+      padding: 120px 10px;
       font-size: 30px;
-      
+      .__monster-image{
+        padding-top: 30px;
+        position: fixed;
+      }
     }
   }
   
@@ -85,7 +117,9 @@
           background-image: url("message_back.png");
           background-size: cover;
           background-position:center; 
-          background-repeat:  no-repeat; 
+          background-repeat:  no-repeat;
+          font-family:"HanziPen SC";
+          border-radius:10px; 
           .message-text{
             padding: 10px,0;
             text-align: center;
@@ -131,6 +165,7 @@
       background-repeat:  no-repeat;
       text-align: center;
       line-height: 40px;
+      text-shadow:-1px -1px #555;
     }
   }
   
