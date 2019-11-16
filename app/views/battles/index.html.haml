@@ -1,0 +1,37 @@
+.body
+  .header
+    =@monster
+    が現れた！！
+  .main
+    .left-bar
+      .player-zone
+        .player-zone__name
+        勇者
+        .player-zone__hp
+        HP 100/100
+        .player-zone__battle-select
+          %input.attack{type:"submit", value:"戦う"}
+          %input.supercial{type:"submit", value:"必殺技"}
+          %input.defence{type:"submit", value:"防御"}
+    .right-bar
+      .monster-zone
+        .player-zone__name
+        = @monster
+        .__hp
+        HP 100/100
+        .__monster-image
+          %img src = '#'
+    .battles
+      .battle-field
+        .messages
+          .battle-message
+            .message-text
+              .__attack
+              勇者の攻撃！！
+              .__send
+              <<<<いくぜ！！>>>>
+              .__damage
+              = @damage
+              ポイントのダメージ
+      .footer
+        ©2019 Tetsuya Omoto

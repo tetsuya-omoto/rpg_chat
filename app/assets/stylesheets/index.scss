@@ -1,0 +1,138 @@
+.body{
+  font-family: 'HiraMinPro-W6';
+  overflow:hidden;
+  box-sizing: border-box;
+  .header{
+    position: relative;
+    height: 90px;
+    line-height: 90px;
+    //background-color:#aa0000;
+    background-image: url("header.jpg");
+    background-size: cover;
+    background-position:center top 5%; 
+    background-repeat:  no-repeat;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .left-bar{
+    width: 300px;
+    float: left;
+    color: white;
+    height: calc(100vh - 150px);
+    //background-color: #253141;
+    background-image: url("side_bar.png");
+    background-position: center bottom 10%;
+    background-size: cover;
+    z-index: 1;
+    
+    .player-zone{
+      
+      height: 100%;
+      //display: flex;
+      align-items: center;
+      padding: 110px 10px;
+      font-size: 30px;
+      &__name{
+      }
+      &__hp{
+      }
+      &__battle-select{
+        .attack{
+        
+        }
+      }
+       
+    }
+  }
+  .right-bar{
+    width: 300px;
+    float: right;
+    color: white;
+    height: calc(100vh - 150px);
+    //background-color: #253141;
+    background-image: url("side_bar.png");
+    background-position: center bottom 10%;
+    background-size: cover;
+    z-index: 1;
+    .monster-zone{
+      
+      height: 100%;
+      //display: flex;
+      align-items: center;
+      padding: 110px 10px;
+      font-size: 30px;
+      
+    }
+  }
+  
+  .battles{
+    height: calc(100vh - 90px);
+    .battle-field{
+      background-image: url("battle_field.jpeg");
+      height: calc(100vh - 150px);
+      overflow: scroll;
+      width:auto;
+      background-size: cover;
+      .messages{
+        //height: calc(100vh - 90px);
+        
+        padding: 46px 40px;
+        overflow: scroll;
+        font-family: 'HiraMinPro-W6';
+        .battle-message{
+          background-image: url("message_back.png");
+          background-size: cover;
+          background-position:center; 
+          background-repeat:  no-repeat; 
+          .message-text{
+            padding: 10px,0;
+            text-align: center;
+            font-weight: bolder;
+          }
+          .message-upper-info{
+            display: flex;
+            margin-bottom: 10px;
+            &__talker{
+              font-size: 16px;
+              font-weight: bold;
+              color: #434a54;
+            }
+            &__date{
+              font-size: 12px;
+              color: #999999;
+              margin-left: 10px;
+            }
+          }
+          .message-lower{
+            &__text{
+              font-size: 14px;
+              color: #434a54;
+              margin-bottom: 10px;
+            }
+            &__image{
+            }
+          }
+        }
+      }
+    }
+    .footer{
+      color: white;
+      position: absolute;/*←絶対位置*/
+      bottom: 0; /*下に固定*/
+      height: 60px;
+      width: 100%;
+      z-index: 2;
+      //background-color:#aa0000;
+      background-image: url("header.jpg");
+      background-size: cover;
+      background-position:center bottom 5%; 
+      background-repeat:  no-repeat;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  
+}
+

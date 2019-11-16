@@ -1,3 +1,4 @@
+# coding: utf-8
 class Battler
  
   def initialize(battlername)
@@ -69,3 +70,5 @@ class Monster < Battler
     [ @attack_message, attack_point ]
   end
 end
+  monster = ['スライム', 'ゴブリン', 'ゴーレム', '魔王の側近', '魔王', '姫']
+  #monster = Monster.new("スライム")

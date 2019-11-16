@@ -1,10 +1,5 @@
-require './battler'
-
 monster_sort = ['スライム', 'ゴブリン', 'ゴーレム', '魔王の側近', '魔王', '姫']
-puts "あなたの名前は？"
-user_name = gets.to_s
-hero = Hero.new(user_name)
-monster = Monster.new(monster_sort[rand(5)])
+
 
 while true do
   puts <<~EOS
