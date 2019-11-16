@@ -83,3 +83,4 @@ production:
   database: rpg_chat_production
   username: rpg_chat
   password: <%= ENV['RPG_CHAT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
