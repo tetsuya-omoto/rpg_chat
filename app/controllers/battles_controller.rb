@@ -1,8 +1,25 @@
 class BattlesController < ApplicationController
-
   def index
-    monster = ['スライム', 'ゴブリン', 'ゴーレム', '魔王の側近', '魔王', '姫']
-    @monster = monster[rand(5)]
-    @damage = rand(1..100)
+    @battles = Battle.all
+    @battle = Battle.new
+    
+  end
+  def new
+    @battle = Battle.new
+  end
+  def create
+    Battle.create(battle_params)
+    @battle = Battle.new(battle_params)
+    respond_to do |format|
+    format.html { redirect_to :root }
+    format.json 
+    end
+  end
+  def search
+    @battles = Battle.search(params[:keyword])
+  end
+  private
+  def battle_params
+    params.require(:battle).permit(:text, :answer)
   end
 end

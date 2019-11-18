@@ -13,7 +13,7 @@
     background-repeat:  no-repeat;
     color: white;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     text-shadow:-1px -1px #555;
   }
 
@@ -42,8 +42,10 @@
       }
       &__battle-select{
         .form{
-          input.plaing-message{
-          width:270px;
+          input.question-message, .answer-message{
+            border-radius:5px;
+          height:40px;
+          width:260px;
           text-align: center;
           font-size: 20px;
           background-image: url("message_back.png");
@@ -51,26 +53,25 @@
           background-position:center; 
           background-repeat:  no-repeat; 
           font-family:"HanziPen SC";
+          cursor: text;
           }
         }
-        .submit{
           input{
-          border-radius:10px;
-          background-image: url("submit.png");
-          background-position:center; 
-          background-repeat:  no-repeat; 
-          display: flex;
-          flex-direction: column;
-          margin:10px 10px;
-          height:45px;
-          width: 95px;
-          background-color:#aa0000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-shadow:1px 1px 5px #fff,5px 5px 10px #888;
+            border-radius:10px;
+            background-image: url("submit.png");
+            background-position:center; 
+            background-repeat:  no-repeat; 
+            display: flex;
+            flex-direction: column;
+            margin:10px 10px;
+            height:45px;
+            width: 95px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow:1px 1px 5px #fff,5px 5px 10px #888;
+            cursor: pointer;
           }
-        }
       }
        
     }
@@ -92,9 +93,36 @@
       align-items: center;
       padding: 120px 10px;
       font-size: 30px;
-      .__monster-image{
-        padding-top: 30px;
-        position: fixed;
+      .form_search{
+        input.search{
+          border-radius:5px;
+        height:40px;
+        width:260px;
+        text-align: center;
+        font-size: 20px;
+        background-image: url("message_back.png");
+        background-size: cover;
+        background-position:center; 
+        background-repeat:  no-repeat; 
+        font-family:"HanziPen SC";
+        cursor: text;
+        }
+      }
+      input{
+        border-radius:10px;
+        background-image: url("submit.png");
+        background-position:center; 
+        background-repeat:  no-repeat; 
+        display: flex;
+        flex-direction: column;
+        margin:10px 10px;
+        height:45px;
+        width: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow:1px 1px 5px #fff,5px 5px 10px #888;
+        cursor: pointer;
       }
     }
   }
@@ -107,49 +135,7 @@
       overflow: scroll;
       width:auto;
       background-size: cover;
-      .messages{
-        //height: calc(100vh - 90px);
-        
-        padding: 46px 40px;
-        overflow: scroll;
-        font-family: 'HiraMinPro-W6';
-        .battle-message{
-          background-image: url("message_back.png");
-          background-size: cover;
-          background-position:center; 
-          background-repeat:  no-repeat;
-          font-family:"HanziPen SC";
-          border-radius:10px; 
-          .message-text{
-            padding: 10px,0;
-            text-align: center;
-            font-weight: bolder;
-          }
-          .message-upper-info{
-            display: flex;
-            margin-bottom: 10px;
-            &__talker{
-              font-size: 16px;
-              font-weight: bold;
-              color: #434a54;
-            }
-            &__date{
-              font-size: 12px;
-              color: #999999;
-              margin-left: 10px;
-            }
-          }
-          .message-lower{
-            &__text{
-              font-size: 14px;
-              color: #434a54;
-              margin-bottom: 10px;
-            }
-            &__image{
-            }
-          }
-        }
-      }
+      
     }
     .footer{
       color: white;

@@ -1,0 +1,24 @@
+.messages{
+  height: calc(100vh - 150px);
+  overflow: scroll;
+  padding: 46px 40px;
+  overflow: scroll;
+  .battle-message{
+    background-image: url("message_back.png");
+    background-size: cover;
+    background-position:center; 
+    background-repeat:  no-repeat;
+    font-family:"HanziPen SC";
+    border-radius:5px; 
+    margin: 15px 0;
+    height: 90px;
+    
+    .message-text{
+      //padding: 10px,0;
+      text-align: center;
+      font-weight: bolder;
+      //line-height: 140px;
+      font-size: 30px;
+    }
+  }
+}

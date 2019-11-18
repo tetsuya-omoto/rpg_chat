@@ -1,21 +1,21 @@
 .body
   .header
-    計
+    〜ヒット
     =@battles.count
-    問
+    〜
   .main
     .left-bar
       .player-zone
         .player-zone__name
-        単語の書
+        user.name
         .player-zone__hp
         =Date.today
         .player-zone__battle-select
           .form
-            =form_with model: @battle, local: true, id: "making" do |form|
+            =form_with model: @battle, local: true do |form|
               =form.text_field :text, placeholder: "問題（最大18字）", class: "question-message"
               =form.text_field :answer, placeholder: "答え（最大18字）", class: "answer-message"
-              =form.submit type:"submit", value:"作成", class: "submit-btn"
+              =form.submit type:"submit", value:"作成", class: "attack"
               //=form.submit type:"submit", value:"必殺技", class: "supercial"
               //=form.submit type:"submit", value:"防御", class: "defence"
     .right-bar

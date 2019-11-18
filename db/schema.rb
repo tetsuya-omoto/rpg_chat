@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2019_11_16_092913) do
   end
 
   create_table "battles", force: :cascade do |t|
-    t.string "name"
     t.string "text"
+    t.string "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
