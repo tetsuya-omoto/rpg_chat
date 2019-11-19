@@ -1,5 +1,6 @@
 .body
   .header
+    
     計
     =@battles.count
     問
@@ -7,24 +8,29 @@
     .left-bar
       .player-zone
         .player-zone__name
-        単語の書
-        .player-zone__hp
-        =Date.today
+        単語張
+        .player-zone__date
+          
         .player-zone__battle-select
           .form
             =form_with model: @battle, local: true, id: "making" do |form|
               =form.text_field :text, placeholder: "問題（最大18字）", class: "question-message"
               =form.text_field :answer, placeholder: "答え（最大18字）", class: "answer-message"
               =form.submit type:"submit", value:"作成", class: "submit-btn"
-              //=form.submit type:"submit", value:"必殺技", class: "supercial"
-              //=form.submit type:"submit", value:"防御", class: "defence"
     .right-bar
       .monster-zone
+        .watch
+          /=image_tag "dial.png", class:"clock"
+          /=image_tag "hour.png", id:"hour", class:"clock"
+          /=image_tag "minute.png", id:":minute", class:"clock"
+          / =image_tag "second.png", id:"second", class:"clock"
         .form_search
           =form_with url: search_battles_path, local: true, method: :get, class: "search-form" do |form|
             =form.text_field :keyword, placeholder: "問題を検索", class: "search"
             =form.submit type:"submit", value:"検索", class: "search-btn"
-        
+        .form_style-change
+          =form_with class: "style-form" do |form|
+            =form.submit type:"submit", value:"切替", class: "style-btn"
         
     .battles
       .battle-field

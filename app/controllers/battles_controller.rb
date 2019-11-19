@@ -15,6 +15,11 @@ class BattlesController < ApplicationController
     format.json 
     end
   end
+  def destroy
+    battle = Battle.find(params[:id])
+    battle.destroy
+     redirect_to :root
+  end
   def search
     @battles = Battle.search(params[:keyword])
   end

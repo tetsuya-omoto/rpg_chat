@@ -6,24 +6,27 @@
     position: relative;
     height: 90px;
     line-height: 90px;
-    //background-color:#aa0000;
-    background-image: url("header.jpg");
+    background-color: #336699;
     background-size: cover;
     background-position:center top 5%; 
     background-repeat:  no-repeat;
     color: white;
     text-align: center;
     font-size: 50px;
-    text-shadow:-1px -1px #555;
+    
+    
   }
+
+
+
+  
 
   .left-bar{
     width: 300px;
     float: left;
     color: white;
     height: calc(100vh - 150px);
-    //background-color: #253141;
-    background-image: url("side_bar.png");
+    background-color: #666666;
     background-position: center bottom 10%;
     background-size: cover;
     z-index: 1;
@@ -31,14 +34,11 @@
     .player-zone{
       
       height: 100%;
-      //display: flex;
       align-items: center;
-      padding: 120px 10px;
+      padding: 10px 10px;
       font-size: 30px;
-      text-shadow:-1px -1px #555;
-      &__name{
-      }
-      &__hp{
+      .clock{
+        height:80px;
       }
       &__battle-select{
         .form{
@@ -48,7 +48,7 @@
           width:260px;
           text-align: center;
           font-size: 20px;
-          background-image: url("message_back.png");
+          background-color: white;
           background-size: cover;
           background-position:center; 
           background-repeat:  no-repeat; 
@@ -58,7 +58,6 @@
         }
           input{
             border-radius:10px;
-            background-image: url("submit.png");
             background-position:center; 
             background-repeat:  no-repeat; 
             display: flex;
@@ -69,8 +68,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            text-shadow:1px 1px 5px #fff,5px 5px 10px #888;
             cursor: pointer;
+            background-color: #336699;
+            color: white;
+            font-size:20px;
+          }
+          input.question-message, .answer-message{
+            color: black;
           }
       }
        
@@ -81,18 +85,22 @@
     float: right;
     color: white;
     height: calc(100vh - 150px);
-    //background-color: #253141;
-    background-image: url("side_bar.png");
+    background-color: #666666;
     background-position: center bottom 10%;
     background-size: cover;
     z-index: 1;
     .monster-zone{
-      text-shadow:-1px -1px #555;
       height: 100%;
-      //display: flex;
       align-items: center;
-      padding: 120px 10px;
+      padding: 10px 10px;
       font-size: 30px;
+      .watch{
+        
+        .clock{
+        
+        height:70px;
+        }
+      }
       .form_search{
         input.search{
           border-radius:5px;
@@ -100,7 +108,7 @@
         width:260px;
         text-align: center;
         font-size: 20px;
-        background-image: url("message_back.png");
+        background-color: white;
         background-size: cover;
         background-position:center; 
         background-repeat:  no-repeat; 
@@ -109,8 +117,10 @@
         }
       }
       input{
+        background-color: #336699;
+        color:white;
+        font-size:20px;
         border-radius:10px;
-        background-image: url("submit.png");
         background-position:center; 
         background-repeat:  no-repeat; 
         display: flex;
@@ -121,8 +131,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        text-shadow:1px 1px 5px #fff,5px 5px 10px #888;
         cursor: pointer;
+      }
+      input.search{
+        color: black;
       }
     }
   }
@@ -130,12 +142,12 @@
   .battles{
     height: calc(100vh - 90px);
     .battle-field{
-      background-image: url("battle_field.jpeg");
+      background-image: url("note.png");
       height: calc(100vh - 150px);
       overflow: scroll;
       width:auto;
       background-size: cover;
-      
+      background-position: center;
     }
     .footer{
       color: white;
@@ -144,16 +156,13 @@
       height: 60px;
       width: 100%;
       z-index: 2;
-      //background-color:#aa0000;
-      background-image: url("header.jpg");
+      background-color:#336699;
       background-size: cover;
       background-position:center bottom 5%; 
       background-repeat:  no-repeat;
       text-align: center;
-      line-height: 40px;
-      text-shadow:-1px -1px #555;
+      line-height: 60px;
     }
   }
-  
+ 
 }
-

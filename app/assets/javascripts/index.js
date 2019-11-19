@@ -1,27 +1,42 @@
 $(function(){
   function buildHTML(battle){
-    var html = `<div class="battle-message">
-                  <div class="message-text">
-                    <div class="message-text__text">
-                      Q.
-                      ${battle.text}
-                    </div>
-                    <div class="message-text__answer">
-                    A.
-                    ${battle.answer}
+    var html = `<div class="body">  
+                  <div class="battle-message">
+                  <a class="message-delete" rel="nofollow" data-method="delete" href="/battles/14">
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                    <div class="message-text">
+                      <div class="message-text__text">
+                        Q.
+                        ${battle.text}
+                      </div>
+                      <div class="message-text__answer">
+                      A.
+                      ${battle.answer}
+                      </div>
                     </div>
                   </div>
                 </div>`
     return html;
     
   }
-  function buildHeaderCount(battles){
-    var htmlHeader = `<div class="header">
-                        ${battles.count}
-                      </div>`
-    console.log(5);
-    return htmlHeader;
-  }
+  
+  bubbly({
+    colorStart: "#dddddd", // default is blue-ish
+    colorStop: "#dddddd",// default is blue-ish
+    blur: 1
+  });
+  $('.message-answer').on('click', function(){
+    $(this).css({
+      opacity: "1"
+    });
+  });
+  $('.message-text').on('click', function(){
+    $(this).css({
+      "color":"#FF3333"
+    });
+  });
+  
   $('#making').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -38,10 +53,11 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      var htmlHeader = buildHeaderCount(data)
       $('.messages').append(html);
       $('#making').val('');
       $('.submit-btn').prop('disabled', false);
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('.submit-btn').removeAttr("disabled");
 
     })
     .fail(function(){

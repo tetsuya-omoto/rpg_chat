@@ -4,14 +4,14 @@
   padding: 46px 40px;
   overflow: scroll;
   .battle-message{
-    background-image: url("message_back.png");
+    background-color: white;
     background-size: cover;
     background-position:center; 
     background-repeat:  no-repeat;
-    font-family:"HanziPen SC";
+    font-family:"HiraMinPro-W6";
     border-radius:5px; 
     margin: 15px 0;
-    height: 90px;
+    height: 140px;
     
     .message-text{
       //padding: 10px,0;
@@ -19,6 +19,24 @@
       font-weight: bolder;
       //line-height: 140px;
       font-size: 30px;
+      cursor: pointer;
+    }
+    .message-delete{
+      z-index: 3;
+      position: relative;
+      left:740px;
+      color:#AAAAAA;
+      cursor: pointer;
+    }
+    .message-answer{
+      opacity: 0;
+      cursor: pointer;
+      //.open-answer{
+
+        text-align: center;
+        font-weight: bolder;
+        font-size: 30px;
+      //}
     }
   }
 }
