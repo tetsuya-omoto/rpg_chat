@@ -5,14 +5,19 @@ $(function(){
                   <a class="message-delete" rel="nofollow" data-method="delete" href="/battles/14">
                     <i class="fas fa-trash-alt"></i>
                   </a>
-                    <div class="message-text">
-                      <div class="message-text__text">
-                        Q.
-                        ${battle.text}
+                    <div class="message-all">
+                      <div class="message-text">
+                        <div class="message-text__inline">
+                          Q.
+                          ${battle.text}
+                        </div>
                       </div>
-                      <div class="message-text__answer">
-                      A.
-                      ${battle.answer}
+                        <div class="message-answer">
+                          <div class="message-answer__inline">
+                          A.
+                          ${battle.answer}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -26,7 +31,7 @@ $(function(){
     colorStop: "#dddddd",// default is blue-ish
     blur: 1
   });
-  $('.message-answer').on('click', function(){
+  $('.message-answer__inline').on('click', function(){
     $(this).css({
       opacity: "1"
     });

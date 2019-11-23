@@ -13,31 +13,36 @@
     margin: 15px 0;
     height: 140px;
     border: 1px solid #DDDDDD;
-    
-    .message-text{
-      //padding: 10px,0;
-      text-align: center;
-      font-weight: bolder;
-      //line-height: 140px;
-      font-size: 30px;
-      cursor: pointer;
-    }
-    .message-delete{
+    a.message-delete{
       z-index: 3;
       position: relative;
       left:740px;
       color:#AAAAAA;
       cursor: pointer;
+      i{
+      }
     }
-    .message-answer{
-      opacity: 0;
-      cursor: pointer;
-      //.open-answer{
-
-        text-align: center;
-        font-weight: bolder;
-        font-size: 30px;
-      //}
+    .message-all{
+      margin: 0 auto 52px;
+      text-align: center;
+      .message-text{
+        &__inline{
+          display: inline;
+          font-weight: bolder;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+      .message-answer{
+        &__inline{
+          display: inline;
+          opacity: 0;
+          cursor: pointer;
+          
+          font-weight: bolder;
+          font-size: 30px;
+        }
+      }
     }
   }
 }

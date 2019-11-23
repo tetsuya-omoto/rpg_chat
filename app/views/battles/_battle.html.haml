@@ -2,11 +2,14 @@
   .battle-message
     =link_to "/battles/#{battle.id}", method: :delete, class: "message-delete" do
       = icon('fas', 'trash-alt')
-    .message-text
-      Q.
-      =battle.text
-    .message-answer
-      A.
-      =battle.answer
-      
+    .message-all
+      .message-text
+        .message-text__inline
+          Q.
+          =battle.text
+      .message-answer
+        .message-answer__inline
+          A.
+          =battle.answer
+        
   
