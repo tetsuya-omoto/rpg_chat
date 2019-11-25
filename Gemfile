@@ -72,3 +72,4 @@ gem 'pry-rails'
 gem 'rb-readline'
 gem "font-awesome-sass"
 gem 'jpmobile'
+gem 'erb2haml'
